@@ -5,38 +5,43 @@
 }
 
 p {
-  font-family: "Staatliches", serif;
+  padding: 5px 0 5px 0;
+  font-family: "Times New Roman", Times, serif;
 }
 
 a {
   font-family: "Staatliches", serif;
 }
 
+h4 {
+  font-family: "Staatliches", serif;
+  padding: 0 0 20px 0;
+}
+
+li {
+  padding: 5px 0 5px 0;
+}
+
+header {
+  margin: 10px 0 10px 10px;
+}
+
 .menu {
   display: flex; /* Gør menuen horisontal */
   list-style: none; /* Fjerner punkttegn fra listeelementer */
   margin: 0;
-  padding: 30px;
-  background-color: gray;
-}
-
-.menu .home {
-  margin-right: auto;
-}
-
-.right_menu {
-  display: flex;
-}
-
-.right_menu li {
-  place-self: end;
+  padding: 0;
 }
 
 .menu a {
   display: block; /* Gør links til blokke for et bedre klikområde */
   padding: 0 25px 0 0; /* Tilføjer indre padding for bedre klikområde */
-  color: white; /* Sætter linkfarve/skriftfarve */
+  color: black; /* Sætter linkfarve/skriftfarve */
   text-decoration: none; /* Fjerner understregning fra links */
+}
+
+.menu .left {
+  margin-right: auto; /* Skubber de andre elementer til højre */
 }
 
 .menu a:hover {
@@ -45,7 +50,6 @@ a {
 
 /* Footer Section */
 .footer {
-  font-family: "Inter", serif;
   background-color: black;
   color: white;
   padding: 20px;
@@ -55,11 +59,22 @@ a {
 .footer-content {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
+  margin: 20px 0 20px 0;
 }
 
 ul {
   list-style: none;
+}
+
+.footer_social_media {
+  list-style: none; /* Fjerner prikker ud for */
+  padding: 0;
+  margin: 0;
+}
+
+.footer_social_media img {
+  width: 20px; /* Størrelse på ikonerne, ensartet størrelse */
+  height: auto; /* Bevarer proportioner */
 }
 
 /*************** MENU SLUT *********************/
@@ -67,13 +82,13 @@ ul {
 .category_list_container {
   display: grid;
   gap: 20px;
-  grid-template-columns: 1fr 1fr 1fr;
-  margin: 10px 10px 10px 10px;
+  grid-template-columns: 1fr;
+  margin: 10px 10px 50px 10px;
 }
 
 .category_list_container a {
   color: white;
-  background-color: #c43c30;
+  background-color: #cfcbc6;
   text-decoration: none;
   padding: 30px;
   text-align: center;
@@ -83,7 +98,12 @@ ul {
 }
 
 .category_list_container a:hover {
-  background-color: #b6382c;
+  background-color: #bab6b2;
+}
+
+.index-img {
+  width: 300px;
+  margin: 50px 0 20px 10px;
 }
 
 /*************** INDEX SLUT *********************/
