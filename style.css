@@ -13,8 +13,14 @@ a {
   font-family: "Staatliches", serif;
 }
 
+h2 {
+  font-family: "Staatliches", serif;
+  font-size: 40px;
+}
+
 h3 {
-  margin: 10px 0 0 2px;
+  margin: 10px 0 0 0;
+  font-family: "Staatliches", serif;
 }
 
 h4 {
