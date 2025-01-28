@@ -1,0 +1,119 @@
+* {
+  margin: 0px; /* Fjerner standard margin for alle elementer */
+  padding: 0px; /* Fjerner standard padding for alle elementer */
+  box-sizing: border-box;
+}
+
+p {
+  font-family: "Staatliches", serif;
+}
+
+a {
+  font-family: "Staatliches", serif;
+}
+
+.menu {
+  display: flex; /* Gør menuen horisontal */
+  list-style: none; /* Fjerner punkttegn fra listeelementer */
+  margin: 0;
+  padding: 30px;
+  background-color: gray;
+}
+
+.menu .home {
+  margin-right: auto;
+}
+
+.right_menu {
+  display: flex;
+}
+
+.right_menu li {
+  place-self: end;
+}
+
+.menu a {
+  display: block; /* Gør links til blokke for et bedre klikområde */
+  padding: 0 25px 0 0; /* Tilføjer indre padding for bedre klikområde */
+  color: white; /* Sætter linkfarve/skriftfarve */
+  text-decoration: none; /* Fjerner understregning fra links */
+}
+
+.menu a:hover {
+  color: grey; /* Ændrer farve ved hover for bedre brugervenlighed- og oplevelse */
+}
+
+/* Footer Section */
+.footer {
+  font-family: "Inter", serif;
+  background-color: black;
+  color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+ul {
+  list-style: none;
+}
+
+/*************** MENU SLUT *********************/
+
+.category_list_container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 10px 10px 10px 10px;
+}
+
+.category_list_container a {
+  color: white;
+  background-color: #c43c30;
+  text-decoration: none;
+  padding: 30px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-row: span 2;
+}
+
+.category_list_container a:hover {
+  background-color: #b6382c;
+}
+
+/*************** INDEX SLUT *********************/
+
+.product_list_container {
+  display: grid;
+  gap: 30px;
+}
+
+.product_list_container a {
+  display: grid;
+  grid-template-columns: subgrid;
+  color: black;
+  text-decoration: none;
+  padding: 10px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/*************** PRODUCTLIST SLUT *********************/
+
+.product_view {
+  display: grid;
+}
+
+.product_info {
+  color: black;
+  text-decoration: none;
+  padding: 10px;
+}
