@@ -36,6 +36,10 @@ header {
   margin: 10px 0 10px 10px;
 }
 
+/*************** GENERELLE INDSTILLINGER *********************/
+
+/*************** HEADER / MENU START *********************/
+
 .menu {
   display: flex; /* Gør menuen horisontal */
   list-style: none; /* Fjerner punkttegn fra listeelementer */
@@ -58,7 +62,10 @@ header {
   color: grey; /* Ændrer farve ved hover for bedre brugervenlighed- og oplevelse */
 }
 
-/* Footer Section */
+/*************** HEADER / MENU SLUT *********************/
+
+/*************** FOOTER START *********************/
+
 .footer {
   background-color: black;
   color: white;
@@ -86,7 +93,9 @@ ul {
   height: auto; /* Bevarer proportioner */
 }
 
-/*************** MENU SLUT *********************/
+/*************** FOOTER SLUT *********************/
+
+/*************** INDEX START *********************/
 
 .category_list_container {
   display: grid;
@@ -124,6 +133,8 @@ ul {
 
 /*************** INDEX SLUT *********************/
 
+/*************** PRODUCTLIST START *********************/
+
 .product_list_container {
   display: grid;
   gap: 30px;
@@ -150,6 +161,8 @@ img {
 }
 
 /*************** PRODUCTLIST SLUT *********************/
+
+/*************** PRODUCT START *********************/
 
 .product_view {
   display: grid;
@@ -222,3 +235,5 @@ select:focus {
     padding: 0 0 0 10px;
   }
 }
+
+/*************** PRODUCT SLUT *********************/
