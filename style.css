@@ -166,6 +166,36 @@ img {
   width: 40px;
 }
 
+.udsolgt {
+  background-color: rgb(255, 48, 48);
+  width: 60px;
+}
+
+.size_selector {
+  margin: 30px 0 0 0;
+}
+
+label {
+  display: block;
+}
+
+select {
+  width: 100%;
+  max-width: 200px; /* Juster bredden efter behov */
+  padding: 10px;
+  margin: 10px 0 0 0;
+  font-size: 15px;
+  border: 1px solid #000000;
+  background-color: white;
+  cursor: pointer;
+  appearance: none; /* Fjern standard browser-pil */
+}
+
+select:focus {
+  border-color: #000000;
+  background-color: white;
+}
+
 @media (min-width: 900px) {
   .product_view {
     display: grid;
