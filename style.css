@@ -197,16 +197,19 @@ select:focus {
 }
 
 .add_basket a {
-  display: block;
-  background-color: #bab6b2;
-  color: black;
-  text-align: center;
+  display: grid;
+  background-color: #000000;
+  color: white;
   align-items: center;
   justify-content: center;
   text-decoration: none;
   margin: 10px 0 0 0;
   width: 300px;
   height: 50px;
+}
+
+.add_basket a:hover {
+  background-color: grey;
 }
 
 @media (min-width: 900px) {
