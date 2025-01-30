@@ -7,11 +7,10 @@ fetch(`https://kea-alt-del.dk/t7/api/products/1543/${productId}`)
         <section>
         <img src="https://kea-alt-del.dk/t7/images/webp/640/${productId}.webp" alt="" />
         <div class="product_info">
-          <h2>Puma ${data.productdisplayname} </h2>
-          <h3> ${data.category} Puma Sneakers - UNISEX - white ${data.usagetype} </h3>
-          <p>kr. 399,- ${data.price} </p>
-          <h3>Produktnummer</h3>
-          <p>167267627</p>
+                  <h2 clas"brand_name">${data.brandname} </h2>
+          <h2 clas"product_name">${data.productdisplayname} </h2>
+          <h3 class"category"> ${data.category} ${data.usagetype} </h3>
+          <p class"price">kr. ${data.price},-</p>
           <h3 class="udsolgt">Udsolgt</h3>
           <div class="size_selector">
             <h3>Vælg størrelse:</h3>
