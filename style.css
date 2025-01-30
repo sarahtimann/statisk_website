@@ -5,77 +5,110 @@
 }
 
 p {
-  font-family: "Staatliches", serif;
+  padding: 5px 0 5px 0;
+  font-family: "Times New Roman", Times, serif;
 }
 
 a {
   font-family: "Staatliches", serif;
 }
 
+h2 {
+  font-family: "Staatliches", serif;
+  font-size: 40px;
+}
+
+h3 {
+  margin: 10px 0 0 0;
+  font-family: "Staatliches", serif;
+}
+
+h4 {
+  font-family: "Staatliches", serif;
+  padding: 0 0 25px 0;
+}
+
+li {
+  padding: 5px 0 5px 0;
+}
+
+header {
+  margin: 10px 0 10px 10px;
+}
+
+/*************** GENERELLE INDSTILLINGER *********************/
+
+/*************** HEADER / MENU START *********************/
+
 .menu {
   display: flex; /* Gør menuen horisontal */
   list-style: none; /* Fjerner punkttegn fra listeelementer */
-  margin: 0;
-  padding: 30px;
-  background-color: gray;
-}
-
-.menu .home {
-  margin-right: auto;
-}
-
-.right_menu {
-  display: flex;
-}
-
-.right_menu li {
-  place-self: end;
+  padding: 0 20px 0 0;
 }
 
 .menu a {
   display: block; /* Gør links til blokke for et bedre klikområde */
   padding: 0 25px 0 0; /* Tilføjer indre padding for bedre klikområde */
-  color: white; /* Sætter linkfarve/skriftfarve */
+  color: black; /* Sætter linkfarve/skriftfarve */
   text-decoration: none; /* Fjerner understregning fra links */
+  font-size: 30px;
+}
+
+.menu .left {
+  margin-right: auto; /* Skubber de andre elementer til højre */
 }
 
 .menu a:hover {
   color: grey; /* Ændrer farve ved hover for bedre brugervenlighed- og oplevelse */
 }
 
-/* Footer Section */
+/*************** HEADER / MENU SLUT *********************/
+
+/*************** FOOTER START *********************/
+
 .footer {
-  font-family: "Inter", serif;
   background-color: black;
   color: white;
-  padding: 20px;
-  margin-top: 20px;
+  padding: 20px 40px 20px 40px;
+  margin-top: 100px;
 }
 
 .footer-content {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
 }
 
 ul {
   list-style: none;
 }
 
-/*************** MENU SLUT *********************/
+.footer_social_media {
+  list-style: none; /* Fjerner prikker ud for */
+  padding: 0;
+  margin: 0;
+}
+
+.footer_social_media img {
+  width: 20px; /* Størrelse på ikonerne, ensartet størrelse */
+  height: auto; /* Bevarer proportioner */
+}
+
+/*************** FOOTER SLUT *********************/
+
+/*************** INDEX START *********************/
 
 .category_list_container {
   display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
-  grid-template-columns: 1fr 1fr 1fr;
-  margin: 10px 10px 10px 10px;
+  margin: 10px 10px 50px 10px;
 }
 
 .category_list_container a {
   color: white;
-  background-color: #c43c30;
+  background-color: #cfcbc6;
   text-decoration: none;
-  padding: 30px;
+  padding: 45px;
   text-align: center;
   display: grid;
   grid-template-columns: subgrid;
@@ -83,13 +116,28 @@ ul {
 }
 
 .category_list_container a:hover {
-  background-color: #b6382c;
+  background-color: #bab6b2;
+}
+
+.index-img {
+  width: 300px;
+  margin: 50px 0 20px 10px;
+}
+
+@media (min-width: 900px) {
+  .category_list_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 /*************** INDEX SLUT *********************/
 
+/*************** PRODUCTLIST START *********************/
+
 .product_list_container {
   display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 30px;
 }
 
@@ -106,14 +154,87 @@ img {
   height: auto;
 }
 
+@media (min-width: 900px) {
+  .product_list_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
 /*************** PRODUCTLIST SLUT *********************/
+
+/*************** PRODUCT START *********************/
 
 .product_view {
   display: grid;
+  padding: 10px;
 }
 
 .product_info {
   color: black;
   text-decoration: none;
-  padding: 10px;
 }
+
+.nedsat {
+  background-color: lightgreen;
+  width: 40px;
+}
+
+.udsolgt {
+  background-color: rgb(255, 48, 48);
+  width: 60px;
+}
+
+.size_selector {
+  margin: 30px 0 0 0;
+}
+
+label {
+  display: block;
+}
+
+select {
+  width: 100%;
+  max-width: 200px; /* Juster bredden efter behov */
+  padding: 10px;
+  margin: 10px 0 30px 0;
+  font-size: 15px;
+  border: 1px solid #000000;
+  background-color: white;
+  cursor: pointer;
+  appearance: none; /* Fjern standard browser-pil */
+}
+
+select:focus {
+  border-color: #000000;
+  background-color: white;
+}
+
+.add_basket a {
+  display: grid;
+  background-color: #000000;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  margin: 10px 0 0 0;
+  width: 300px;
+  height: 50px;
+}
+
+.add_basket a:hover {
+  background-color: grey;
+}
+
+@media (min-width: 900px) {
+  .product_view {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .product_info {
+    padding: 0 0 0 10px;
+  }
+}
+
+/*************** PRODUCT SLUT *********************/
