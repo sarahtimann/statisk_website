@@ -1,6 +1,7 @@
 let productId = 1543;
 let product_view = document.querySelector(".product_view");
-fetch(`https://kea-alt-del.dk/t7/api/products/1543/${productId}`)
+
+fetch(`https://kea-alt-del.dk/t7/api/products/${productId}`)
   .then((response) => response.json())
   .then((data) => {
     product_view.innerHTML = `
