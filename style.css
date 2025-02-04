@@ -18,19 +18,25 @@ a {
   font-family: "Staatliches", serif;
 }
 
+h1 {
+  font-family: "Staatliches", serif;
+  color: black;
+  text-align: center;
+  margin: 30px 0 30px 0;
+}
+
 h2 {
   font-family: "Staatliches", serif;
   font-size: 40px;
 }
 
 h3 {
-  margin: 10px 0 0 0;
   font-family: "Staatliches", serif;
 }
 
 h4 {
-  font-family: "Staatliches", serif;
-  padding: 0 0 25px 0;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: lighter;
 }
 
 li {
@@ -156,7 +162,7 @@ ul {
   text-decoration: none;
   padding: 10px;
   margin: 10px;
-  border: 2px solid black;
+  border: 0.5px solid black;
 }
 
 article {
@@ -165,7 +171,7 @@ article {
 }
 
 .product_list_container a:hover {
-  transform: translateY(5px); /* Løfter elementet lidt op */
+  background-color: #cfcbc6;
 }
 
 @media (min-width: 900px) {
