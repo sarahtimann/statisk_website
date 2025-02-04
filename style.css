@@ -20,9 +20,10 @@ a {
 
 h1 {
   font-family: "Staatliches", serif;
+  font-size: 40px;
   color: black;
   text-align: center;
-  /* margin: 30px 0 30px 0; */
+  margin: 30px 0 30px 0;
 }
 
 h2 {
@@ -48,12 +49,8 @@ li a {
   margin-right: auto;
 }
 
-header {
-  /* margin: 10px 0 10px 10px; */
-}
-
 main {
-  margin: 0 50px 0 50px;
+  margin: 0 20px 0 20px;
 }
 
 /*************** GENERELLE INDSTILLINGER *********************/
@@ -219,6 +216,10 @@ ul {
     margin: 70px 0 40px 0;
     width: 400px;
   }
+
+  main {
+    margin: 0 50px 0 50px;
+  }
 }
 
 /*************** INDEX SLUT *********************/
@@ -228,15 +229,16 @@ ul {
 .product_list_container {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
   gap: 30px;
 }
 
 .product_list_container a {
   display: grid;
+  grid-template-columns: subgrid;
   color: black;
   text-decoration: none;
   padding: 10px;
-  margin: 10px;
   border: 0.5px solid black;
 }
 
@@ -246,7 +248,7 @@ article {
 }
 
 .product_list_container a:hover {
-  background-color: #cfcbc6;
+  transform: scale(1.01);
 }
 
 @media (min-width: 900px) {
