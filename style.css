@@ -5,8 +5,9 @@
 }
 
 p {
-  padding: 5px 0 5px 0;
+  margin: 40px 0 0 0;
   font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
 }
 
 img {
@@ -18,31 +19,42 @@ a {
   font-family: "Staatliches", serif;
 }
 
-h2 {
+h1 {
   font-family: "Staatliches", serif;
   font-size: 40px;
+  color: black;
+  text-align: center;
+  margin: 30px 0 30px 0;
+}
+
+h2 {
+  font-family: "Staatliches", serif;
+  font-size: 30px;
 }
 
 h3 {
-  margin: 10px 0 0 0;
-  font-family: "Staatliches", serif;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: lighter;
+  font-size: 30px;
 }
 
 h4 {
-  font-family: "Staatliches", serif;
-  padding: 0 0 25px 0;
+  font-family: "Times New Roman", Times, serif;
+  margin: 20px 0 30px 0;
+  font-weight: lighter;
 }
 
-li {
-  padding: 5px 0 5px 0;
+li a {
+  /* padding: 5px 0 5px 0; */
+  font-size: 30px;
 }
 
-header {
-  margin: 10px 0 10px 10px;
+.left {
+  margin-right: auto;
 }
 
 main {
-  margin: 0 50px 0 50px;
+  margin: 0 20px 0 20px;
 }
 
 /*************** GENERELLE INDSTILLINGER *********************/
@@ -52,23 +64,83 @@ main {
 .menu {
   display: flex; /* Gør menuen horisontal */
   list-style: none; /* Fjerner punkttegn fra listeelementer */
-  padding: 0 20px 0 0;
+  margin: 20px 0 0 0;
+  padding: 0;
 }
 
 .menu a {
   display: block; /* Gør links til blokke for et bedre klikområde */
-  padding: 0 25px 0 0; /* Tilføjer indre padding for bedre klikområde */
+  padding: 0 20px 0 20px; /* Tilføjer indre padding for bedre klikområde */
   color: black; /* Sætter linkfarve/skriftfarve */
   text-decoration: none; /* Fjerner understregning fra links */
-  font-size: 30px;
-}
-
-.menu .left {
-  margin-right: auto; /* Skubber de andre elementer til højre */
 }
 
 .menu a:hover {
   color: grey; /* Ændrer farve ved hover for bedre brugervenlighed- og oplevelse */
+}
+
+.burger {
+  width: 30px; /* Bredden på burgerikonet */
+  height: 20px; /* Højden på burgerikonet */
+  cursor: pointer; /* Gør ikonet klikbart */
+  margin: 20px 20px 0;
+}
+
+.burger .line {
+  width: 100%; /* Sikre at linjer fylder hele bredden */
+  height: 3px; /* Linjetykkelse */
+  background-color: black; /* Linjefarve */
+  margin-bottom: 5px; /* Afstanden mellem linjerne */
+  transition: 0.2s linear; /* Glidende overgang for animation */
+  border-radius: 10px; /* Rundede hjørner for et blødere udtryk */
+}
+
+.burger {
+  display: none; /* Gør burgermenu usynlig på desktop view */
+}
+
+@media (max-width: 900px) {
+  .menu {
+    display: none; /* Gør menuen horisontal */
+  }
+
+  .burger {
+    display: block; /* Gør burgermenu synlig på mobil view */
+  }
+
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px); /* Rotere første linje for at skabe et X */
+    transition: 0.2s linear; /* Glidende overgang for animationen */
+  }
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0; /* Skjuler midterlinjen */
+    transition: 0.15s linear; /* Hastigheden på overgangen fra linjer til X */
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px); /* Roterer tredje linje for at skabe et X */
+    transition: 0.2s linear; /* Glidende overgang for animationen */
+  }
+
+  nav.active .menu {
+    display: block; /* Gør menuen synlig, når der trykkes på burgerikonet */
+    background-color: white; /* Baggrundsfarven for menuen */
+    position: absolute; /* Placerer menuen ovenover andet indhold (fx header og logo) */
+    top: 55px; /* Får menuen til at udfolde sig lige under headeren */
+    right: 0;
+    left: 0;
+    width: 100%; /* Gør menuen fuldbredde */
+    z-index: 1; /* Gør menuen vises ovenover alt andet indhold */
+  }
+
+  nav.active .menu li {
+    margin: 10px 20px; /* Tilføjer lidt luft mellem menu muligheder */
+  }
+
+  nav.active .menu a {
+    font-size: 24px; /* Skriftstørrelse for menuen */
+  }
 }
 
 /*************** HEADER / MENU SLUT *********************/
@@ -78,7 +150,7 @@ main {
 .footer {
   background-color: black;
   color: white;
-  padding: 20px 40px 20px 40px;
+  padding: 20px 20px 20px 20px;
   margin-top: 100px;
 }
 
@@ -109,7 +181,10 @@ ul {
 .category_list_container {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
   gap: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
 .category_list_container a {
@@ -119,8 +194,10 @@ ul {
   text-decoration: none;
   padding: 45px;
   text-align: center;
+  align-items: center;
   display: grid;
   grid-template-columns: subgrid;
+  grid-template-rows: subgrid;
   grid-row: span 2;
 }
 
@@ -129,14 +206,19 @@ ul {
 }
 
 .index-img {
-  width: 300px;
-  margin: 50px 0 20px 10px;
+  margin: 40px 0 40px 0;
 }
 
 @media (min-width: 900px) {
   .category_list_container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .index-img {
+    display: grid;
+    margin: 70px 0 40px 0;
+    width: 400px;
   }
 }
 
@@ -147,16 +229,17 @@ ul {
 .product_list_container {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
   gap: 30px;
 }
 
 .product_list_container a {
   display: grid;
+  grid-template-columns: subgrid;
   color: black;
   text-decoration: none;
   padding: 10px;
-  margin: 10px;
-  border: 2px solid black;
+  border: 0.5px solid black;
 }
 
 article {
@@ -165,7 +248,7 @@ article {
 }
 
 .product_list_container a:hover {
-  transform: translateY(5px); /* Løfter elementet lidt op */
+  transform: scale(1.01);
 }
 
 @media (min-width: 900px) {
@@ -181,52 +264,41 @@ article {
 
 .product_view {
   display: grid;
-  padding: 10px;
+  margin: 50px 0 0 0;
 }
 
 .product_info {
   color: black;
   text-decoration: none;
+  margin: 20px 0 0 0;
 }
 
 .tilbud {
   background-color: lightgreen;
-  width: 40px;
-  visibility: visible;
-}
-
-.isOnSale {
+  width: 50px;
+  margin: 20px 0 0 0;
   visibility: hidden;
+  font-size: 20px;
 }
 
 .udsolgt {
   background-color: rgb(255, 48, 48);
-  width: 60px;
+  width: 65px;
+  visibility: hidden;
+  margin: 10px 0 20px 0;
+  font-size: 20px;
+}
+
+.isOnSale {
+  visibility: visible;
+}
+
+.soldOut {
+  visibility: visible;
 }
 
 .size_selector {
   margin: 30px 0 0 0;
-}
-
-label {
-  display: block;
-}
-
-select {
-  width: 100%;
-  max-width: 200px; /* Juster bredden efter behov */
-  padding: 10px;
-  margin: 10px 0 30px 0;
-  font-size: 15px;
-  border: 1px solid #000000;
-  background-color: white;
-  cursor: pointer;
-  appearance: none; /* Fjern standard browser-pil */
-}
-
-select:focus {
-  border-color: #000000;
-  background-color: white;
 }
 
 .add_basket a {
@@ -236,7 +308,6 @@ select:focus {
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  margin: 10px 0 0 0;
   width: 300px;
   height: 50px;
 }
@@ -252,7 +323,7 @@ select:focus {
   }
 
   .product_info {
-    padding: 0 0 0 10px;
+    margin: 0 0 0 30px;
   }
 }
 
