@@ -15,8 +15,8 @@ function showList(products) {
         `<article>
     <a href="product.html?id=${product.id}">
       <img src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp" alt="" />
-      <h3 clas"brand_name">${product.brandname} </h3>
-      <h4 clas"product_name">${product.productdisplayname} </h4>
+      <h2 clas"brand_name">${product.brandname} </h2>
+      <h2 clas"product_name">${product.productdisplayname} </h2>
       <h3${product.productdisplayname}</h3>
       <h4>DKK ${product.price},-</h4>
       <h3 class="udsolgt ${product.soldout && "soldOut"}">Udsolgt</h3>

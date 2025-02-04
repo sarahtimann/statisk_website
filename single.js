@@ -11,10 +11,9 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${productId}`)
           <h2 class="brand_name">${data.brandname} </h2>
           <h2 class="product_name">${data.productdisplayname} </h2>
           <h3 class="category"> ${data.category} ${data.usagetype} </h3>
-          <h3 class="gender"> ${data.gender}</h3>
-          <p class="price">kr. ${data.price},-</p>
+          <p class="price">DKK ${data.price},-</p>
           <h3 class="tilbud ${data.discount && "isOnSale"}">
-          -${data.discount}%</h3>
+          - ${data.discount}%</h3>
           <h3 class="udsolgt ${data.soldout && "soldOut"}">Udsolgt</h3>
             <div class="add_basket">
               <a href="product.html">Add to basket</a>

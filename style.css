@@ -5,8 +5,9 @@
 }
 
 p {
-  margin: 10px 0 0 0;
+  margin: 40px 0 0 0;
   font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
 }
 
 img {
@@ -28,16 +29,19 @@ h1 {
 
 h2 {
   font-family: "Staatliches", serif;
-  font-size: 40px;
+  font-size: 30px;
 }
 
 h3 {
-  font-family: "Staatliches", serif;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: lighter;
+  font-size: 30px;
 }
 
 h4 {
   font-family: "Times New Roman", Times, serif;
-  margin: 0 0 30px 0;
+  margin: 20px 0 30px 0;
+  font-weight: lighter;
 }
 
 li a {
@@ -271,15 +275,18 @@ article {
 
 .tilbud {
   background-color: lightgreen;
-  width: 40px;
-  margin: 10px 0 0 0;
+  width: 50px;
+  margin: 20px 0 0 0;
   visibility: hidden;
+  font-size: 20px;
 }
 
 .udsolgt {
   background-color: rgb(255, 48, 48);
-  width: 60px;
+  width: 65px;
   visibility: hidden;
+  margin: 10px 0 20px 0;
+  font-size: 20px;
 }
 
 .isOnSale {
@@ -303,9 +310,6 @@ article {
   text-decoration: none;
   width: 300px;
   height: 50px;
-}
-
-section img {
 }
 
 .add_basket a:hover {
