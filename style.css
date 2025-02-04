@@ -192,16 +192,21 @@ article {
 .tilbud {
   background-color: lightgreen;
   width: 40px;
-  visibility: visible;
-}
-
-.isOnSale {
   visibility: hidden;
 }
 
 .udsolgt {
   background-color: rgb(255, 48, 48);
   width: 60px;
+  visibility: hidden;
+}
+
+.isOnSale {
+  visibility: visible;
+}
+
+.soldOut {
+  visibility: visible;
 }
 
 .size_selector {

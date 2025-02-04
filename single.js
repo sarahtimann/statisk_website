@@ -16,7 +16,7 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${productId}`)
           <p class="description">${data.description}</p>
           <h3 class="tilbud ${data.discount && "isOnSale"}">
           -${data.discount}%</h3>
-          <h3 class="udsolgt">Udsolgt</h3>
+          <h3 class="udsolgt ${data.soldout && "soldOut"}">Udsolgt</h3>
           <div class="size_selector">
             <h3>Vælg størrelse:</h3>
             <select>
